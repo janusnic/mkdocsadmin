@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block body %}
+    <p>Filename: {{ filename }}</p>
+    <form action="{{ url_for('submit_edit', filename=filename) }}" method="POST">
+        <textarea cols="80" rows="24" name="edit_content">{{ content }}</textarea>
+        <br />
+        <input type="submit" name="submit" value="submit" />
+    </form>
+{% endblock %}

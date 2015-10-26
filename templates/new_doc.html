@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<form action="{{ url_for('submit_new') }}" method="POST">
+    <table>
+        <tr>
+            <td><p>Filename:</p></td>
+            <td>
+                <input type="text" name="in_filename">
+            </td>
+        </tr>
+    </table>
+
+    <p>Content</p>
+    <textarea cols="80" rows="24" name="in_content"></textarea>
+
+    <br />
+
+    <input type="submit" name="save" value="save" />
+</form>
+
+{% endblock %}

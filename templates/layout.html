@@ -1,0 +1,47 @@
+<!doctype html>
+<title>mkdocs-admin</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<body>
+<div class="page">
+
+    <div class="navbar">
+        <table class="noborder">
+            <tr class="noborder">
+                <td><a href="{{ url_for('display_new') }}">new file</a></td>
+                <td><a href="{{ url_for('display_filestatus') }}">status</a></td>
+                <td><a href="{{ url_for('display_log') }}">display log<a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="filebar">
+
+        <table class="border">
+            <tr class="border">
+                <th class="border">Filename</th>
+            </tr>
+
+            {% for doc in doclist %}
+            <tr class="border" class="centercol">
+                <td class="border"><a href="{{ url_for('display_edit', filename=doc) }}">{{ doc }}</a></td>
+            </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+
+    <div class="content">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash">
+                {% for message in messages %}
+                    <ul>{{ message }}</ul>
+                {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        {% block body %}{% endblock %}
+    </div>
+
+</div>
+</body>

@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block body %}
+    <table class="border">
+        <tr class="border">
+            <th class="border">name</th>
+            <th class="border">md_path</th>
+            <th class="border">html_path</th>
+            <th class="border">build_time</th>
+        </tr>
+        {% for doc in data %}
+        <tr class="border" class="hlrow">
+            <td class="border">{{ data[doc].name }}</td>
+            <td class="border">{{ data[doc].mdpath }}</td>
+            <td class="border">{{ data[doc].htmlpath }}</td>
+            <td class="border">{{ data[doc].buildtime }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

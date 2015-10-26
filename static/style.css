@@ -1,0 +1,57 @@
+div.content {
+    float: left;
+    padding: 10px;
+    width: 60%;
+}
+
+div.filebar {
+    float: left;
+    padding: 10px;
+    width: 20%;
+}
+
+div.flash {
+    background: #33ccff;
+    padding: 4px;
+}
+
+pre {
+    display: block;
+    font-family: monospace;
+    overflow: auto;
+    white-space: pre-wrap;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table.border, th.border, td.border {
+    border: 1px solid black;
+}
+
+table.noborder, th.noborder, td.noborder {
+    border: none;
+}
+
+td {
+    padding: 5px;
+}
+
+td.centercol {
+    text-align: center;
+}
+
+th {
+    background: #fffac7;
+    padding: 5px;
+}
+
+tr.hlrow:nth-child(even) {
+    background: #e5e5e5;
+}
+
+textarea {
+    overflow: auto;
+    resize: none;
+}

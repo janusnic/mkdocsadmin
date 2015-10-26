@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<h2>Log content</h2>
+<pre>
+{% for line in log_content %}
+    {{ line }}
+{% endfor %}
+</pre>
+
+{% endblock %} 
